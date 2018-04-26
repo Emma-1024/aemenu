@@ -1,0 +1,16 @@
+.navbar {
+    height: 50px;
+    line-height: 50px;
+    background-color:skyblue;
+}
+.navbar li{
+    float: left;
+    width: 20%;
+    font-size: 14px;
+    
+    
+}
+.navbar li a{
+    color: #fff;
+
+}

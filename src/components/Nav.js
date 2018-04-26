@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Navbar, Jumbotron, Button, Grid, Row, Col, Image} from 'react-bootstrap';
-import '../css/App.css';
+import '../css/nav.css';
 
 import App from './App';
 import Category from './Category';
 import Diymenu from './Diymenu';
 
 const Nav = () => (
-    <div>
+    <div className="navbar">
         <ul>
             <li>
-                <Link to="/">App</Link>
+                <Link to="/">首页</Link>
             </li>
             <li>
-                <Link to="/category">Category</Link>
+                <Link to="/category">分类</Link>
             </li>
             <li>
-                <Link to="/diymenu">Diymenu</Link>
+                <Link to="/diymenu">DIY菜单</Link>
             </li>
         </ul>
         <Route path="/category" component={Category}></Route>
