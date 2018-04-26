@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Navbar, Jumbotron, Button, Grid, Row, Col, Image} from 'react-bootstrap';
+import Nav from './Nav';
 import '../css/App.css';
 
 class App extends Component {
@@ -34,13 +35,17 @@ class App extends Component {
           </Grid>
           {/* 导航 */}
           <Grid container>
-            
+            <Nav />
           </Grid>
+          <h3>111</h3>
+          
         </div>
-      </Router>    
+      </Router>
+
+      
        
        
-    );
+    )
   }
 }
 
