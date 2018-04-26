@@ -1,0 +1,41 @@
+
+.App-header {
+  height: 70px;
+  line-height: 70px;
+  background-color: #fff;
+  border: 1px solid red;
+}
+.App-search {
+  line-height: 34px;
+  height: 38px;
+  margin-top: 16px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.search-info {
+  /* float: left; */
+  width: 40%;
+  height: 34px;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+.search-btn {
+  /* float: right; */
+  width: 50px;
+  line-height: 34px;
+  border: none;
+  border-radius: 4px;
+  background-color: skyblue;
+  /* outline: none; */
+}
+.login, .register {
+  font-size: 16px;
+  line-height: 50px;
+  cursor: pointer;
+  padding-right: 10px;
+}
+.login:hover, .register:hover {
+  color: blue;
+}
