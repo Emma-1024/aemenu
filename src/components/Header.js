@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Navbar, Jumbotron, Button, Grid, Row, Col, Carousel} from 'react-bootstrap';
-import '../css/Header.css';
+import '../css/header.css';
 
 class Header extends Component {
   render() {
@@ -9,7 +9,7 @@ class Header extends Component {
         {/* 头部 */}
         <Grid fluid className="wrap">
           <Row className="App-header">
-            <Col xs={2} sm={2} md={2}>
+            <Col xs={2}>
               <div className="App-logo" >
                 <img src={require("../images/img/logo.jpg")} alt="logo" style={{width: 50, height: 50, margin:'0 auto'}}/>
               </div>

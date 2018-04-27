@@ -24,10 +24,10 @@ class Nav extends Component {
                 <Link to="/diymenu">DIY菜单</Link>
               </li>
             </ul>
-            <Route exact path="/" component={Home}></Route>
-            <Route path="/category" component={Category}></Route>
-            <Route path="/diymenu" component={Diymenu}></Route>
           </Row>
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/category" component={Category}></Route>
+          <Route path="/diymenu" component={Diymenu}></Route>
         </Grid>
       </div>
     )

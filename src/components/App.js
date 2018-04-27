@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Navbar, Jumbotron, Button, Grid, Row, Col, Carousel} from 'react-bootstrap';
 import Header from './Header';
 import Nav from './Nav';
+import '../css/index.css';
 
 // for temporal use
 import week1 from '../images/img/week1.png'
