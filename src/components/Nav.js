@@ -7,23 +7,31 @@ import Home from './Home';
 import Category from './Category';
 import Diymenu from './Diymenu';
 
-const Nav = () => (
-    <div className="navbar">
-        <ul className="navul">
-            <li>
+class Nav extends Component {
+  render() {
+    return (
+      <div>
+        <Grid fluid>
+          <Row className="navbar">
+            <ul className="navul">
+              <li>
                 <Link to="/">首页</Link>
-            </li>
-            <li>
+              </li>
+              <li>
                 <Link to="/category">分类</Link>
-            </li>
-            <li>
+              </li>
+              <li>
                 <Link to="/diymenu">DIY菜单</Link>
-            </li>
-        </ul>
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/category" component={Category}></Route>
-        <Route path="/diymenu" component={Diymenu}></Route>
-    </div>
-)
+              </li>
+            </ul>
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/category" component={Category}></Route>
+            <Route path="/diymenu" component={Diymenu}></Route>
+          </Row>
+        </Grid>
+      </div>
+    )
+  }
+}
 
 export default Nav
