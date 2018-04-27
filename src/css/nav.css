@@ -2,7 +2,6 @@
   height: 50px;
   line-height: 50px;
   background-color:skyblue;
-  
 }
 .navbar .navul {
   height: 50px;
@@ -11,10 +10,7 @@
   float: left;
   width: 20%;
   font-size: 14px;
-  
-  
 }
 .navbar .navul>li a{
   color: #fff;
-
 }
