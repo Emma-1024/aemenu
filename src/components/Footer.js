@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Grid, Row, Col, Glyphicon} from 'react-bootstrap';
+import ScrollTopButton from './ScrollTopButton'
 
 import '../css/footer.css';
 
@@ -24,9 +25,10 @@ class Footer extends Component {
             </Col>
           </Row>
         </Grid>
-        <div className="gotop" onClick={()=> this._goTop()}>
+        {/* <div className="gotop" onClick={()=> this._goTop()}>
           <Glyphicon glyph="circle-arrow-up" />
-        </div>
+        </div> */}
+        <ScrollTopButton />
       </div>
     )
   }
