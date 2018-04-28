@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import {Grid, Row, Col, Glyphicon} from 'react-bootstrap';
+import { Grid, Row, Col, Glyphicon } from 'react-bootstrap';
 
 import '../css/footer.css';
 
 class Footer extends Component {
-  constructor() {
-    super()
-    this.state ={scrollTop: 0}
-  }
   componentWillMount() {
     this._goTop = this._goTop.bind(this)
   }
@@ -16,15 +12,19 @@ class Footer extends Component {
       <div>
         <Grid fluid>
           <Row className="footer">
-            <Col xs={3} className="pull-right">
-              <h4>About me</h4>
-              <a href="https://github.com/Emma-1024">GitHub of Emma</a><br/>
-              <a href="https://github.com/Alex-T-1024">GitHub of Alex</a><br/>
-              <a href="https://github.com/Emma-1024/aemenu.git">Project GitHub</a>
+            <Col xs={4}>
+              <h4>About us</h4>
+            </Col>
+            <Col xs={8}>
+              <div class="link">
+                <a href="https://github.com/Emma-1024">GitHub of Emma</a><br />
+                <a href="https://github.com/Alex-T-1024">GitHub of Alex</a><br />
+                <a href="https://github.com/Emma-1024/aemenu.git">Project GitHub</a>
+              </div>
             </Col>
           </Row>
         </Grid>
-        <div className="gotop" onClick={()=> this._goTop()}>
+        <div className="gotop" onClick={() => this._goTop()}>
           <Glyphicon glyph="circle-arrow-up" />
         </div>
       </div>
@@ -32,7 +32,7 @@ class Footer extends Component {
   }
   //返回顶部
   _goTop() {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
   }
 }
 

@@ -2,6 +2,11 @@
   margin-top: 10px;
   background-color: rgb(186, 218, 231);
   margin-top: 500px;
+  height: 100px;
+}
+.footer h4 {
+  font-style: italic;
+  font-weight: 700;
 }
 .gotop {
   position: fixed;
@@ -10,4 +15,10 @@
   font-size: 50px;
   cursor: pointer;
   transition: all 0.5 linear;
+}
+.link {
+  line-height: 30px;
+}
+.link a:hover {
+  color: #fff;
 }

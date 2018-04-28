@@ -3,6 +3,7 @@ import { Navbar, Jumbotron, Button, Grid, Row, Col, Carousel} from 'react-bootst
 import '../css/header.css';
 
 class Header extends Component {
+  
   render() {
     return (
       <div>
@@ -24,7 +25,7 @@ class Header extends Component {
             </Col>
             <Col xm={5}>
               <div className="App-user pull-right" >
-                <span className="login">登录</span>
+                <span className="login" onClick={ () => this.loginModel() }>登录</span>
                 <span className="register">注册</span>
               </div>
             </Col>
