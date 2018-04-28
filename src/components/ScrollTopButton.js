@@ -25,8 +25,6 @@ class ScrollTopButton extends Component {
   }
 
   _scroll2top() {
-    console.log(3, this.props)
-
     var id = setInterval(this._scrollStep, this.props.intervalInMs)
     this.setState({ intervalID: id })
   }
