@@ -5,7 +5,6 @@ body,html {
 body {
   margin: 0;
   padding: 0;
-  /* font-family: sans-serif; */
   font-size: 14px;
   font-family: 'Microsoft YaHei', sans-serif;
   background-color: #f5f5f5;
@@ -14,5 +13,8 @@ ul {
   list-style: none;
 }
 a{
+  text-decoration: none;
+}
+a:hover{
   text-decoration: none;
 }

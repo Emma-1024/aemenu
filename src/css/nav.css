@@ -13,4 +13,12 @@
 }
 .navbar .navul>li a{
   color: #fff;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+}
+.navbar .navul>li a:hover{
+  color: skyblue;
+  background-color: #fff;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, Jumbotron, Button, Grid, Row, Col, Carousel, Glyphicon} from 'react-bootstrap';
 import '../css/home.css'
 
+// for temporal use
 import week1 from '../images/img/week1.png'
 import week2 from '../images/img/week2.png'
 import week3 from '../images/img/week3.png'
@@ -14,6 +15,7 @@ class Home extends Component {
     super()
     this.carouselData=[]
     this.seasonData=[]
+    this.span={}
     this.state ={
       category: 'fruit',
       active: ['active','']
@@ -64,7 +66,7 @@ class Home extends Component {
             <Col xs={6}>
               <div className="toggleBtn pull-left">
                 <span className={this.state.active[0]} onClick={() => this._changePhotos('fruit', 0) }>水果</span>
-                <span className={this.state.active[1]} onClick={() => this._changePhotos('vegetable', 1) }>蔬菜</span>
+                <span className={this.state.active[1]}  onClick={() => this._changePhotos('vegetable', 1) }>蔬菜</span>
               </div>
             </Col>
             <Col xs={12}>
@@ -98,12 +100,6 @@ class Home extends Component {
 
   //时令瓜果蔬菜
   _renderFruitData(category){
-    //需要传参数
-    if(category === 'vegetable'){
-      console.log('vegetable')
-    }else{
-      console.log('fruit')
-    }
     return this.seasonData[category].map(item => {
       return (
         <Col xs={3} key={ item.id }>
@@ -118,15 +114,13 @@ class Home extends Component {
     })
   }
 
-  _changePhotos(category, index){
+  _changePhotos(category,index){
     this.setState({category: category})
     var active=this.state.active
     active[index]='active'
     active[(index+1)%2]=''
     this.setState({active:active})
   }
-
-
 }
 
 export default Home

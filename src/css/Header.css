@@ -8,9 +8,10 @@
   height: 70px;
   line-height: 70px;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
+  z-index: 999;
   margin-left: 0;
 }
 .App-logo {

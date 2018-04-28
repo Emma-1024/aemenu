@@ -23,7 +23,7 @@
   display: inline-block;
   width: 50px;
   height: 30px;
-  margin-right: 10px;
+  margin-right: 20px;
   line-height: 30px;
   text-align: center;
   border: 1px solid skyblue;
@@ -41,7 +41,7 @@
 }
 
 .toggleList {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* height: 150px; */
 }
 .toggleList a {

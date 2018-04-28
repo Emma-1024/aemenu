@@ -1,0 +1,12 @@
+.footer {
+  margin-top: 10px;
+  background-color: rgb(186, 218, 231);
+  margin-top: 500px;
+}
+.gotop {
+  position: fixed;
+  right: 50px;
+  bottom: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
