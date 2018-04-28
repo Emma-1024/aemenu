@@ -104,10 +104,10 @@ class Home extends Component {
           <a href="#">
             <img src={item.url} heigth={150} />
             <div className="cover">
-              <div className="itemname">
-                <Glyphicon glyph="gift" className="gifticon"/>
-                <span>{item.name}</span>
-              </div>
+              {/* <div className="itemname"> */}
+                {/* <Glyphicon glyph="gift" className="gifticon"/> */}
+                <div className="itemname">{item.name}</div>
+              {/* </div> */}
             </div>
           </a>
         </Col>

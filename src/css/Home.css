@@ -73,13 +73,13 @@
   height: 100%;
   width: 100%;
 }
-.toggleList .cover .itemname .gifticon{
+/* .toggleList .cover .itemname .gifticon{
   font-size: 14px;
   position: absolute;
   left: 0;
   top: 0;
 }
-/* .toggleList .cover .itemname span{
+.toggleList .cover .itemname span{
   position: absolute;
   left: 0;
   top: 0;
