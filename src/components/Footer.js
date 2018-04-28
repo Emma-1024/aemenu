@@ -20,7 +20,7 @@ class Footer extends Component {
               <h4>About me</h4>
               <a href="https://github.com/Emma-1024">GitHub of Emma</a><br/>
               <a href="https://github.com/Alex-T-1024">GitHub of Alex</a><br/>
-              <a href="#">Project address</a>
+              <a href="https://github.com/Emma-1024/aemenu.git">Project GitHub</a>
             </Col>
           </Row>
         </Grid>
