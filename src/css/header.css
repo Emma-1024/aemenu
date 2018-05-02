@@ -6,7 +6,7 @@
 .App-header {
   width: 100%;
   height: 70px;
-  line-height: 70px;
+  /* line-height: 70px; */
   background-color: #fff;
   position: fixed;
   top:0;
@@ -17,6 +17,7 @@
 .App-logo {
   width: 50px;
   height: 50px;
+  line-height: 70px;
 }
 .App-search {
   line-height: 34px;
@@ -25,6 +26,7 @@
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
+  line-height: 70px;
 }
 .search-info {
   /* float: left; */
@@ -51,5 +53,8 @@
 }
 .login:hover, .register:hover {
   color: blue;
+}
+.App-user {
+  line-height: 70px;
 }
 

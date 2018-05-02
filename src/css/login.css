@@ -1,0 +1,138 @@
+.loginmodel {
+  position: relative;
+  display: inline;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: 15%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.popup_inner form{
+  width: 45%;
+  padding-top: 15%;
+  padding-right: 5%;
+}
+.popup_inner input:not(.check){
+  line-height: 30px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  width: 100%;
+}
+.popup_inner .closebtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.loginitem {
+  display: flex;
+  justify-content: space-between;
+}
+.loginbtn {
+  margin: 0 auto;
+  display: table;
+}
+.loginitem>a:hover{
+  color: skyblue;
+}
+.line{
+  position: relative;
+}
+.line .bar{
+  position: absolute;
+  height: 41%;
+  width: 2px;
+  background-color: skyblue;
+}
+.line .bartop {
+  top: 0;
+}
+.line .barbottom {
+  bottom: 0;
+}
+.line .login-or {
+  position: absolute;
+  top: 41%;
+  left: -20px;
+  width: 40px;
+  height: 18%;
+  line-height: 53px;
+  text-align: center;
+  border: 2px solid skyblue;
+  border-radius: 10px;
+}
+.login-social-buttons {
+  width: 55%;
+  padding-top: 15%;
+  padding-left: 5%;
+}
+.login-social-buttons .social{
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #F0F8FF;
+}
+.social span{
+  margin-left: 20px;
+  vertical-align: top;
+  color: #8fc31f;
+}
+.social .bmg {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('../images/fonts/nl_dsficon.png') 0 0 no-repeat;
+  background-size: 120px 80px;
+}
+.social:nth-child(2) .bmg {
+  background: url('../images/fonts/nl_dsficon.png') -40px 0px no-repeat;
+  background-size: 120px 80px;
+}
+.social:nth-child(3) .bmg {
+  background: url('../images/fonts/nl_dsficon.png') -80px 0px no-repeat;
+  background-size: 120px 80px;
+}
+.social {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.social:nth-child(2) span {
+  color: #7ecef4;
+}
+.social:nth-child(3) span {
+  color: #fe4e5d;
+}
+.login-social-buttons .social:hover .bmg{
+  background: url('../images/fonts/nl_dsficon.png') 0px -40px no-repeat;
+  background-size: 120px 80px;
+}
+.login-social-buttons .social:nth-child(2):hover .bmg{
+  background: url('../images/fonts/nl_dsficon.png') -40px -40px no-repeat;
+  background-size: 120px 80px;
+}
+.login-social-buttons .social:nth-child(3):hover .bmg{
+  background: url('../images/fonts/nl_dsficon.png') -80px -40px no-repeat;
+  background-size: 120px 80px;
+}
+.login-social-buttons .social:hover span{
+  color: #000;
+}
+

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Navbar, Jumbotron, Button, Grid, Row, Col, Carousel} from 'react-bootstrap';
+import { Navbar, Jumbotron, Button, Grid, Row, Col, Carousel, Modal} from 'react-bootstrap';
 import '../css/header.css';
+import Login from './Login';
 
 class Header extends Component {
-  
   render() {
     return (
       <div>
@@ -14,7 +14,7 @@ class Header extends Component {
               <div className="App-logo" >
                 <img src={require("../images/img/logo.jpg")} alt="logo" style={{width: 50, height: 50, margin:'0 auto'}}/>
               </div>
-            </Col> 
+            </Col>
             <Col xs={5}>
               <div className="App-search">
                 <input type="text" className="search-info pull-left" placeholder="Search for..."/>
@@ -23,16 +23,20 @@ class Header extends Component {
                 </span>
               </div>
             </Col>
-            <Col xm={5}>
+            <Col xs={5}>
               <div className="App-user pull-right" >
-                <span className="login" onClick={ () => this.loginModel() }>登录</span>
+                {/* <span className="login" onClick={ () => this._loginModel() }>登录</span> */}
+                <Login></Login>
                 <span className="register">注册</span>
               </div>
             </Col>
           </Row>
         </Grid>
+        {/* <Login></Login> */}
       </div>
     )
   }
+  // _loginModel() {
+  // }
 }
 export default Header
