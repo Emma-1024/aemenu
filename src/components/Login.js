@@ -24,9 +24,9 @@ class Popup extends Component {
             <div className="loginbtn">
               <Button bsStyle="info">登录</Button>
             </div>
-            <Button bsSize="xsmall" className="closebtn" onClick={this.props.closePopup}>
+            <div bsSize="xsmall" className="closebtn" onClick={this.props.closePopup}>
               <Glyphicon glyph="remove"/>
-            </Button>
+            </div>
           </form>
           <div className="line">
             <div className="bar bartop"></div>

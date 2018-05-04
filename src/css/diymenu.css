@@ -1,0 +1,39 @@
+.formlist form {
+  width: 70%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid skyblue;
+  border-radius: 10px;
+  background-color: #F0F8FF;
+}
+
+form label {
+  display: block;
+}
+.inputlist {
+  /* position: relative; */
+  width: 50%;
+  margin: 10px 0;
+  border: 1px solid skyblue;
+}
+.listbox{
+  display: inline;
+  position: relative;
+}
+.listitem{
+  display:inline-block;
+  margin-right: 5px;
+  padding: 10px 20px;
+  /* border-radius: 15px; */
+  background-color: #ccc;
+}
+.glyphicon-remove {
+  position: absolute;
+  top: -12px;
+  right: 4px;
+  color: blue;
+  cursor: pointer;
+}
+.basket {
+  margin-top: 20px;
+}

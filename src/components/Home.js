@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Jumbotron, Button, Grid, Row, Col, Carousel, Glyphicon } from 'react-bootstrap';
+import { Grid, Row, Col, Carousel, Glyphicon } from 'react-bootstrap';
 import '../css/home.css'
 
 // for temporal use
@@ -20,28 +20,24 @@ class Home extends Component {
       category: 'fruit',
       active: ['active', '']
     }
-  }
-  componentWillMount() {
+
     this.carouselData = [
       { id: 1, url: week1, name: "超级烹饪大蛋糕", description: "香浓诱人的巧克力口味；柔软的口感、甜蜜的味道,完美的全巧克力蛋糕经得起各种口味的挑剔.表面富有曲线美的巧克力花纹与蛋糕的名称相得益彰。" },
       { id: 2, url: week2, name: "超级烹饪大蛋糕", description: "香浓诱人的巧克力口味；柔软的口感、甜蜜的味道,完美的全巧克力蛋糕经得起各种口味的挑剔.表面富有曲线美的巧克力花纹与蛋糕的名称相得益彰。" },
       { id: 3, url: week3, name: "超级烹饪大蛋糕", description: "香浓诱人的巧克力口味；柔软的口感、甜蜜的味道,完美的全巧克力蛋糕经得起各种口味的挑剔.表面富有曲线美的巧克力花纹与蛋糕的名称相得益彰。" },
-    ],
-      this.seasonData = {
-        fruit: [
-          { id: 1, url: mongo, name: "mongo" },
-          { id: 2, url: mongo, name: "mongo" },
-        ],
-
-        vegetable: [
-          { id: 1, url: cabbage, name: "cabbage" },
-          { id: 2, url: cabbage, name: "cabbage" },
-        ]
-      },
-
-      this._changePhotos = this._changePhotos.bind(this)
+    ]
+    this.seasonData = {
+      fruit: [
+        { id: 1, url: mongo, name: "mongo" },
+        { id: 2, url: mongo, name: "mongo" },
+      ],
+      vegetable: [
+        { id: 1, url: cabbage, name: "cabbage" },
+        { id: 2, url: cabbage, name: "cabbage" },
+      ]
+    }
+    this._changePhotos = this._changePhotos.bind(this)
   }
-
   render() {
     return (
       <div>
@@ -86,7 +82,7 @@ class Home extends Component {
       return (
         <Carousel.Item key={item.id}>
           {/* <img width={900} height={500} alt="900x500" src={item.url} /> */}
-          <img width={900} height={500} src={item.url} />
+          <img width={900} height={500} src={item.url}/>
           <Carousel.Caption>
             <h3>{item.name}</h3>
             <p>{item.description}</p>
@@ -101,8 +97,8 @@ class Home extends Component {
     return this.seasonData[category].map(item => {
       return (
         <Col xs={3} key={item.id}>
-          <a href="#">
-            <img src={item.url} heigth={150} />
+          <a href="">
+            <img src={item.url} heigth={150}/>
             <div className="cover">
               {/* <div className="itemname"> */}
                 <Glyphicon glyph="gift" className="gifticon"/>

@@ -34,8 +34,8 @@
 }
 .popup_inner .closebtn {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -4px;
+  top: 12px;
 }
 .loginitem {
   display: flex;
@@ -53,7 +53,7 @@
 }
 .line .bar{
   position: absolute;
-  height: 41%;
+  height: 45%;
   width: 2px;
   background-color: skyblue;
 }
@@ -65,11 +65,11 @@
 }
 .line .login-or {
   position: absolute;
-  top: 41%;
+  top: 45%;
   left: -20px;
   width: 40px;
-  height: 18%;
-  line-height: 53px;
+  height: 10%;
+  line-height: 51px;
   text-align: center;
   border: 2px solid skyblue;
   border-radius: 10px;
