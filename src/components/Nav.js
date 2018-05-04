@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Grid, Row } from 'react-bootstrap';
 import '../css/nav.css';
 
-import Home from './Home';
-import Category from './Category';
-import Diymenu from './Diymenu';
+// import Home from './Home';
+// import Category from './Category';
+// import Diymenu from './Diymenu';
 
 class Nav extends Component {
   constructor() {
@@ -31,9 +31,10 @@ class Nav extends Component {
               </li>
             </ul>
           </Row>
-          <Route exact path="/" component={Home}></Route>
+          {/* 暂时删除 */}
+          {/* <Route exact path="/" component={Home}></Route>
           <Route path="/category" component={Category}></Route>
-          <Route path="/diymenu" component={Diymenu}></Route>
+          <Route path="/diymenu" component={Diymenu}></Route> */}
         </Grid>
       </div>
     )
