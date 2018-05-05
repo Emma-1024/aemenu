@@ -21,9 +21,15 @@
 }
 .navbar .navul>li a:hover{
   color: skyblue;
-  background-color: #fff;
+  background-color: #F0F8FF;
 }
-.navbar .navul>li a.active {
+/* .navbar .navul>li a.active {
   color: skyblue;
   background-color: #fff;
+} */
+.selected {
+  background-color: #F0F8FF;
+}
+.selected span{
+  color: skyblue;
 }
