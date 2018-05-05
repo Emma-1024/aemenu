@@ -37,3 +37,30 @@ form label {
 .basket {
   margin-top: 20px;
 }
+.dishName {
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #AFEEEE;
+}
+.ingredientBox {
+  margin-left: 20px;
+}
+.ingredientStyle {
+  display: inline-block;
+  margin:5px 0;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #FAEBD7;
+}
+.listItem {
+  width: 70%;
+  margin: 5px;
+  border: 1px solid skyblue;
+  border-radius: 10px; 
+}
