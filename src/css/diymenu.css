@@ -6,7 +6,11 @@
   border-radius: 10px;
   background-color: #F0F8FF;
 }
-
+.formlist form span:nth-child(1){
+  display: inline-block;
+  padding: 10px;
+  color: red;
+}
 form label {
   display: block;
 }
@@ -38,6 +42,7 @@ form label {
   margin-top: 20px;
 }
 .dishName {
+  display: inline-block;
   width: 30%;
   height: 30px;
   line-height: 30px;
@@ -63,4 +68,10 @@ form label {
   margin: 5px;
   border: 1px solid skyblue;
   border-radius: 10px; 
+}
+.ingredientDlete {
+  cursor: pointer;
+}
+.ingredientDlete:hover {
+  color: skyblue;
 }

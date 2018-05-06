@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Button, ButtonToolbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import '../css/diymenu.css'
 
+// test
+import testData from '../test/basketListJson'
+
 class Diymenu extends Component {
   constructor() {
     super()
@@ -13,7 +16,7 @@ class Diymenu extends Component {
       ingredientNum: '',
       ingredientList: [],
     }
-    this.basketListObj = {}
+    this.basketListObj = testData.basketListJSON || {}
   }
   render() {
     return (
@@ -23,6 +26,7 @@ class Diymenu extends Component {
           {this.state.showForm ?
             <div className="formlist">
               <form action="#" id="menuform">
+                <span>(注意:输入框不能为空!)</span>
                 <label htmlFor="dishes">菜名:
                 <input type="text" id="dishes" placeholder="请输入一个菜名" value={this.state.dish}
                     onChange={(e) => this._handleDish(e)} />
@@ -52,7 +56,7 @@ class Diymenu extends Component {
           <Button bsStyle="info" onClick={this._checkBasket.bind(this)}>查看菜篮</Button>
           {this.state.showBasket ?
             <div>
-              <ShowBasketList data={this.basketListObj}></ShowBasketList>
+              <ShowBasketList data={ this.basketListObj }></ShowBasketList>
             </div>
             : null}
         </div>
@@ -101,6 +105,10 @@ class Diymenu extends Component {
     })
   }
   _add2basket() {
+    console.log('dish', this.state.dish)
+    if (this.state.dish.trim() === '' || this.state.ingredientName.trim() === '' || this.state.ingredientNum === '') {
+      return
+    }
     if (this.basketListObj.hasOwnProperty(this.state.dish)) {
       this.basketListObj[this.state.dish].push({ ingredientName: this.state.ingredientName, ingredientNum: this.state.ingredientNum })
     } else {
@@ -113,13 +121,14 @@ class Diymenu extends Component {
       ingredientName: '',
       ingredientNum: ''
     })
-    // console.log(this.basketListObj)
   }
   _checkBasket() {
     this.setState({
       showBasket: !this.state.showBasket
     })
-    console.log(this.basketListObj)
+    /* 可以使用localStorage存储 */
+    // localStorage.setItem('basketListObj', JSON.stringify(this.basketListObj))
+    // console.log(this.basketListObj)
   }
 }
 const tooltip = (
@@ -140,10 +149,17 @@ class ListItem extends Component {
 }
 
 class ShowBasketList extends Component {
+  constructor(props){
+    super(props)
+    // console.log(props.data)
+    this.state = {
+      data: props.data
+    }
+  }
   render() {
     return (
       <div>
-        {this._renderBasket(this.props.data)}
+        {this._renderBasket(this.state.data)}
       </div>
     )
   }
@@ -151,21 +167,38 @@ class ShowBasketList extends Component {
     var newArr = []
     var i = 0
     for (var k in data) {
+      let keyprop=k
       var arr = []
-      arr.push(<div className="dishName" key={i++}>{k}</div>)
+      arr.push(
+        <div>
+          <span className="dishName" key={i++}>{k}</span>
+          <span className="ingredientDlete" onClick={ ()=>{ this._deleteDish(keyprop) } }> 删除</span>
+        </div>
+      )
       arr.push(data[k].map((item, index) => {
         return (
           <div className="ingredientBox" key={index}>
-            <span className="ingredientStyle">{ item.ingredientName }</span>
-            <span className="ingredientStyle">{ item.ingredientNum }</span>
+            <span className="ingredientStyle">{item.ingredientName}</span>
+            <span className="ingredientStyle">{item.ingredientNum}</span>
+            <span className="ingredientDlete" onClick={() => { this._deleteItem(keyprop, index) }}> 删除</span>
           </div>
-          )
+        )
       }))
-      newArr.push(<div key={i++} className="listItem">{ [arr] }</div>)
+      newArr.push(<div key={i++} className="listItem">{arr}</div>)
     }
-
     return newArr
-
+  }
+  _deleteDish(keyprop){
+    delete this.state.data[keyprop]
+    this.setState({
+      data: this.state.data
+    })
+  }
+  _deleteItem(keyprop, index) {
+    this.state.data[keyprop].splice(index,1)
+    this.setState({
+      data: this.state.data
+    })
   }
 }
 export default Diymenu
