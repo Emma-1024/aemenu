@@ -1,0 +1,47 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 15%;
+  bottom: 15%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.popup_inner form{
+  width: 45%;
+  padding-top: 15%;
+  padding-right: 5%;
+}
+.popup_inner input:not(.check){
+  line-height: 40px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  width: 100%;
+}
+.popup_inner .closebtn {
+  position: absolute;
+  right: -4px;
+  top: 12px;
+}
+.loginitem {
+  display: flex;
+  justify-content: space-between;
+}
+.loginbtn {
+  margin: 0 auto;
+  display: table;
+}
+.loginitem>a:hover{
+  color: skyblue;
+}

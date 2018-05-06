@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Grid, Row, Col } from 'react-bootstrap';
-import '../css/header.css';
-import Login from './Login';
+import { Grid, Row, Col } from 'react-bootstrap'
+import Login from './Login'
+import Register from './Register'
+import '../css/header.css'
 
 class Header extends Component {
   render() {
@@ -27,7 +28,8 @@ class Header extends Component {
               <div className="App-user pull-right" >
                 {/* <span className="login" onClick={ () => this._loginModel() }>登录</span> */}
                 <Login></Login>
-                <span className="register">注册</span>
+                <Register></Register>
+                {/* <span className="register">注册</span> */}
               </div>
             </Col>
           </Row>

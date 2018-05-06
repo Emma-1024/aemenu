@@ -42,14 +42,15 @@ class Nav extends Component {
       </div>
     )
   }
-  _changeActive(index) {
-    var active = this.state.active
-    active.forEach( (item,index) => {
-      active[index] = ''
-    })
-    active[index] = 'active'
-    this.setState({ active: active })
-  }
+  /*废弃方法*/
+  // _changeActive(index) {
+  //   var active = this.state.active
+  //   active.forEach( (item,index) => {
+  //     active[index] = ''
+  //   })
+  //   active[index] = 'active'
+  //   this.setState({ active: active })
+  // }
 }
 
 export default Nav

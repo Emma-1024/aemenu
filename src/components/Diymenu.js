@@ -170,8 +170,8 @@ class ShowBasketList extends Component {
       let keyprop=k
       var arr = []
       arr.push(
-        <div>
-          <span className="dishName" key={i++}>{k}</span>
+        <div key={i++}>
+          <span className="dishName">{k}</span>
           <span className="ingredientDlete" onClick={ ()=>{ this._deleteDish(keyprop) } }> 删除</span>
         </div>
       )
@@ -193,6 +193,26 @@ class ShowBasketList extends Component {
     this.setState({
       data: this.state.data
     })
+
+    // data test
+    // #region Get
+    // fetch('http://192.168.1.44:8080/test')
+    //   .then(res=>res.json())
+    //   .then(json=>console.log(json))
+    // #endregion
+
+    //#region Post
+    // var data = {username: 'example'}
+    // fetch('http://192.168.1.44:8080/blob',{
+    //   method: 'POST',
+    //   body: JSON.stringify(data),
+    //   headers: new Headers({
+    //     'Content-Type': 'application/json'
+    //   })
+    // })
+    // .then(res => res.json())
+    // .then(response => console.log('success:', response))
+    // #endregion
   }
   _deleteItem(keyprop, index) {
     this.state.data[keyprop].splice(index,1)

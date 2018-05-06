@@ -1,0 +1,59 @@
+.registermodel {
+  position: relative;
+  display: inline-block;
+}
+.register_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.5);
+}
+.register_popup_inner {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 15%;
+  bottom: 15%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.register_popup_inner form{
+  width: 70%;
+  margin: 5% auto;
+  padding: 50px;
+  background-color: rgb(236, 235, 235);
+}
+.register_popup_inner input:not(.check){
+  line-height: 40px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  width: 100%;
+}
+.register_popup_inner .closebtn {
+  position: absolute;
+  right: -4px;
+  top: 12px;
+}
+.registeritem {
+  display: flex;
+  justify-content: space-between;
+}
+.alink {
+  color: red;
+}
+.alink:hover{
+  color: red;
+  text-decoration: underline;
+}
+.registerbtn {
+  margin: 0 auto;
+  display: table;
+}
+.registeritem>a:hover{
+  color: skyblue;
+}
