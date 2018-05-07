@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Grid, Row, Col, Carousel, Glyphicon } from 'react-bootstrap';
+import React, { Component } from 'react'
+import { Grid, Row, Col, Carousel, Glyphicon } from 'react-bootstrap'
 import '../css/home.css'
 
 // for temporal use
@@ -22,7 +22,8 @@ class Home extends Component {
     }
 
     this.carouselData = [
-      { id: 1, url: "http://192.168.1.44:8080/img/witcher.jpg", name: "超级烹饪大蛋糕", description: "香浓诱人的巧克力口味；柔软的口感、甜蜜的味道,完美的全巧克力蛋糕经得起各种口味的挑剔.表面富有曲线美的巧克力花纹与蛋糕的名称相得益彰。" },
+      // { id: 1, url: "http://192.168.1.44:8080/img/witcher.jpg", name: "超级烹饪大蛋糕", description: "香浓诱人的巧克力口味；柔软的口感、甜蜜的味道,完美的全巧克力蛋糕经得起各种口味的挑剔.表面富有曲线美的巧克力花纹与蛋糕的名称相得益彰。" },
+      { id: 1, url: week1, name: "超级烹饪大蛋糕", description: "香浓诱人的巧克力口味；柔软的口感、甜蜜的味道,完美的全巧克力蛋糕经得起各种口味的挑剔.表面富有曲线美的巧克力花纹与蛋糕的名称相得益彰。" },
       { id: 2, url: week2, name: "超级烹饪大蛋糕", description: "香浓诱人的巧克力口味；柔软的口感、甜蜜的味道,完美的全巧克力蛋糕经得起各种口味的挑剔.表面富有曲线美的巧克力花纹与蛋糕的名称相得益彰。" },
       { id: 3, url: week3, name: "超级烹饪大蛋糕", description: "香浓诱人的巧克力口味；柔软的口感、甜蜜的味道,完美的全巧克力蛋糕经得起各种口味的挑剔.表面富有曲线美的巧克力花纹与蛋糕的名称相得益彰。" },
     ]
@@ -97,7 +98,7 @@ class Home extends Component {
     return this.seasonData[category].map(item => {
       return (
         <Col xs={3} key={item.id}>
-          <a href="">
+          <a href="/category/season">
             <img src={item.url} heigth={150}/>
             <div className="cover">
               {/* <div className="itemname"> */}
@@ -114,8 +115,10 @@ class Home extends Component {
   _changePhotos(category, index) {
     this.setState({ category: category })
     var active = this.state.active
+    active.forEach( (item,index) => {
+      active[index] = ''
+    })
     active[index] = 'active'
-    active[(index + 1) % 2] = ''
     this.setState({ active: active })
   }
 }

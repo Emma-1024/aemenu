@@ -9,6 +9,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0, 0.5);
+  z-index: 999;
 }
 .register_popup_inner {
   position: absolute;
@@ -56,4 +57,22 @@
 }
 .registeritem>a:hover{
   color: skyblue;
+}
+.tips {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+
+.tips p {
+  min-width: 300px;
+  max-width: 400px;
+  line-height: 40px;
+  margin: 0 auto;
+  color: #FFF;
+  /* display: none; */
+  background-color: #C73834;
 }
