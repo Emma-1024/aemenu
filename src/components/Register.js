@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Glyphicon } from 'react-bootstrap'
+import md5 from '../common/md5'
 import '../css/register.css'
 
 class Popup extends Component {
@@ -47,6 +48,10 @@ class Popup extends Component {
       </div>
     )
   }
+  // 避免关闭model的时候，动画还没完成。卸载动画
+  componentWillUnmount() {
+    clearTimeout(this._animateId)
+  }
   _handleUsername(e) {
     this.setState({username: e.target.value})
   }
@@ -87,7 +92,7 @@ class Popup extends Component {
     //#endregion
 
     //发送请求
-    var data = {username: this.state.username, password: this.state.password, repassword: this.state.repassword}
+    var data = {username: this.state.username, password: md5(this.state.password)}
     fetch('http://192.168.1.44:8080/regist',{
       method: 'POST',
       body:JSON.stringify(data),
@@ -96,13 +101,15 @@ class Popup extends Component {
       })
     })
     .then(responce => console.log('success', responce))
+
+    //注册成功跳转home页，显示头像？？？？
   }
 
 
   /*2秒动画消失*/
   _animate() {
-    setTimeout(()=>{
-      this.setState({tips: ''})
+    this._animateId = setTimeout(()=>{
+     this.setState({tips: ''})
     },2000)
   }
 }

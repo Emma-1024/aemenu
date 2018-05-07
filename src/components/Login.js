@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Button, Glyphicon } from 'react-bootstrap'
 import PopupLogin from './PopupLogin'
 import '../css/login.css'
 
@@ -22,7 +21,7 @@ class Login extends Component {
         {this.state.showPopup ?
           <div>
             <PopupLogin closePopup={ this._togglePopup.bind(this) }></PopupLogin>
-        </div>
+          </div>
           : null
         }
       </div>
