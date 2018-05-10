@@ -3,29 +3,39 @@ class EventManager {
     this.eventList = {}
   }
 
-  subscribe(eventName, handler) {
+  subscribe(eventName, ...handlers) {
     if (this.eventList[eventName] == null) {
       this.eventList[eventName] = []
     }
-    if (typeof handler) this.eventList[eventName].push(handler)
-    else console.error('Event handler must be a function!')
+    handlers.forEach(element => {
+      if (typeof element === 'function') {
+        this.eventList[eventName].push(element)
+      }
+      else console.warn('Event handler must be a function!')
+    })
   }
 
-  removeSubscriber(eventName, handler) {
+  removeSubscriber(eventName, ...handlers) {
     if (this.eventList[eventName] == null) return
     var arr = this.eventList[eventName]
-    var index = arr.indexOf(handler)
-    if (index < 0) return
-    arr.splice(index, 1)
+    handlers.forEach(element => {
+      var index = arr.indexOf(element)
+      if (index >= 0) {
+        arr.splice(index, 1)
+      }
+      else console.warn('Unable to remove non-exist handler: ', element)
+    })
   }
 
-  removeAll(eventName) {
-    this.eventList[eventName] = undefined
+  removeAll(...eventNames) {
+    eventNames.forEach(name=>{
+      this.eventList[name] = undefined
+    })
   }
 
-  publish(eventName, eventParams) {
+  publish(eventName, ...eventParams) {
     return this.eventList[eventName] ?
-      this.eventList[eventName].forEach(handler => handler(eventParams)) : null
+      this.eventList[eventName].forEach(handler => handler(...eventParams)) : null
   }
 }
 

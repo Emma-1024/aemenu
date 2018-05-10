@@ -39,9 +39,13 @@
   display: flex;
   justify-content: space-between;
 }
-.loginbtn {
+.middle {
   margin: 0 auto;
   display: table;
+}
+p.middle{
+  color: red;
+  cursor: pointer;
 }
 .loginitem>a:hover{
   color: skyblue;

@@ -26,19 +26,14 @@ class Header extends Component {
             </Col>
             <Col xs={5}>
               <div className="App-user pull-right" >
-                {/* <span className="login" onClick={ () => this._loginModel() }>登录</span> */}
                 <Login></Login>
                 <Register></Register>
-                {/* <span className="register">注册</span> */}
               </div>
             </Col>
           </Row>
         </Grid>
-        {/* <Login></Login> */}
       </div>
     )
   }
-  // _loginModel() {
-  // }
 }
 export default Header

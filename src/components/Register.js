@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Glyphicon } from 'react-bootstrap'
-import md5 from '../common/md5'
+import md5 from '../utility/md5'
+import eventManager from '../common/eventModule'
 import '../css/register.css'
 
 class Popup extends Component {
@@ -120,11 +121,8 @@ class Register extends Component {
     this.state = {
       showPopup: false
     }
-  }
-  _togglePopup() {
-    this.setState({
-      showPopup: !this.state.showPopup
-    })
+    this._showRejester = this._showRejester.bind(this,'true')
+    eventManager.subscribe('jump2register', this._showRejester)
   }
   render() {
     return (
@@ -139,7 +137,19 @@ class Register extends Component {
       </div>
     )
   }
+  componentWillUnmount() {
+    eventManager.removeSubscriber('jump2register',this._showRejester)
+  }
+  _togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    })
+  }
+  _showRejester(boole) {
+    this.setState({
+      showPopup: boole
+    })
+  }
 }
 
 export default Register
-

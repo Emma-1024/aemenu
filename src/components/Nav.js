@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Grid, Row } from 'react-bootstrap';
 import '../css/nav.css';
 
@@ -28,6 +28,9 @@ class Nav extends Component {
               </li>
               <li>
                 <NavLink to="/diymenu" activeClassName="selected"><span>DIY菜单</span></NavLink>
+              </li>
+              <li>
+                <NavLink to="/login" activeClassName="selected"><span>RedirectExample</span></NavLink>
               </li>
             </ul>
           </Row>

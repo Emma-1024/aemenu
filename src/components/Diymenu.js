@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Button, ButtonToolbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import '../css/diymenu.css'
+import PopupLogin from './PopupLogin'
+import eventManager from '../common/eventModule'
+
 
 // test
 import testData from '../test/basketListJson'
@@ -17,11 +20,18 @@ class Diymenu extends Component {
       ingredientList: [],
     }
     this.basketListObj = testData.basketListJSON || {}
+
+    //添加判断是否登录的方法
+    // 如果没有登录则返回false，登录则返回true
+
   }
   render() {
     return (
       <div>
         <div>
+          {/* 如果没有登录则显示click me */}
+          <div onClick={ this._showLoginPopup.bind(this)}>定制菜单需登录,Clike me~~~</div>
+          {/* 如果登录则显示show menu */}
           <Button onClick={() => this._toggleShow()}>点击添加菜单</Button>
           {this.state.showForm ?
             <div className="formlist">
@@ -62,6 +72,9 @@ class Diymenu extends Component {
         </div>
       </div>
     )
+  }
+  _showLoginPopup(){
+    eventManager.publish('showLoginPopup')
   }
   _toggleShow() {
     this.setState({

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {Grid, Row, Col, Glyphicon} from 'react-bootstrap';
+import React from 'react'
+import { Grid, Row, Col } from 'react-bootstrap'
 import ScrollTopButton from './ScrollTopButton'
 
 import '../css/footer.css';

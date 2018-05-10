@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Button, Glyphicon } from 'react-bootstrap'
+import createHistory from "history/createBrowserHistory"
+import eventManager from '../common/eventModule'
 import '../css/popuplogin.css'
 
-
+// const history = createHistory()
 class PopupLogin extends Component {
   constructor() {
     super()
@@ -15,6 +17,7 @@ class PopupLogin extends Component {
     return (
       <div className="popup">
         <div className="popup_inner">
+        {/* from表单部分 */}
           <form id="login_form" action="#" method="post">
             <div className="loginitem">
               <input type="text" value={ this.state.username } onChange={ (e)=>this._handleUsername(e) } placeholder="请输入用户名"/>
@@ -28,18 +31,22 @@ class PopupLogin extends Component {
               </label>
               <a href="">忘记密码?</a>
             </div>
-            <div className="loginbtn">
+            <div className="middle">
               <Button bsSize="large" bsStyle="info" onClick={ ()=>this._submit() }>登录</Button>
             </div>
-            <div bssize="xsmall" className="closebtn" onClick={this.props.closePopup}>
+            <p className="middle" onClick={ this._jump2register.bind(this) }>还没有账户?请先注册</p>
+            {/* <div bssize="xsmall" className="closebtn" onClick={ this._togglePopup.bind(this)}> */}
+            <div bssize="xsmall" className="closebtn" onClick={ this.props.closePopup }>
               <Glyphicon glyph="remove"/>
             </div>
           </form>
+          {/* 中间线 */}
           <div className="line">
             <div className="bar bartop"></div>
             <div className="login-or">OR</div>
             <div className="bar barbottom"></div>
           </div>
+          {/* TODO，第三方登录部分具体功能还未开始实现 */}
           <div className="login-social-buttons">
             <a href="" className="social">
               <div className="bmg"></div>
@@ -97,6 +104,18 @@ class PopupLogin extends Component {
       this.setState({tips: ''})
     },2000)
   }
+  // _togglePopup(){
+  //   history.goBack()
+  // }
+  //TODO
+  //当点击登录按钮之后，若登陆成功则返回用户信息  ？？？
+
+
+  _jump2register(){
+    eventManager.publish('jump2register')
+    this.props.closePopup()
+  }
+
 
 }
 export default PopupLogin
