@@ -1,0 +1,8 @@
+{
+  "mongo": [
+    { "id": 1, "url": "http://localhost:8000/img/foodshow.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星" },
+    { "id": 2, "url": "http://localhost:8000/img/foodshow.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星" },
+    { "id": 3, "url": "http://localhost:8000/img/foodshow.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星" },
+    { "id": 4, "url": "http://localhost:8000/img/foodshow.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星" }
+  ]
+}

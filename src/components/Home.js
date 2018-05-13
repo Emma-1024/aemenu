@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col, Carousel, Glyphicon } from 'react-bootstrap'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import '../css/home.css'
 
 // for temporal use
@@ -98,7 +99,7 @@ class Home extends Component {
     return this.seasonData[category].map(item => {
       return (
         <Col xs={3} key={item.id}>
-          <a href="/category/season">
+          <Link to={`/category/season/${item.name}`}>
             <img src={item.url} heigth={150}/>
             <div className="cover">
               {/* <div className="itemname"> */}
@@ -106,7 +107,7 @@ class Home extends Component {
                 <span className="itemname"> {item.name}</span>
               {/* </div> */}
             </div>
-          </a>
+          </Link>
         </Col>
       )
     })

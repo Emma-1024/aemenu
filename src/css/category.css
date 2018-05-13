@@ -1,0 +1,33 @@
+.season-img {
+  width: 100%;
+  display: block;
+}
+.season-img:hover{
+  opacity: 0.8;
+}
+.season-list{
+  background-color: #000;
+}
+.season-list>a{
+  display: block;
+  height: 100%;
+}
+.info {
+  height: 90px;
+  /* line-height:20%; */
+  background-color: rgb(214, 231, 247);
+}
+
+.cell>strong,
+.cell>span,
+.cell>em {
+  display: block;
+  line-height:30px;
+  /* 单行溢出 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cell>em {
+  color: red;
+}
