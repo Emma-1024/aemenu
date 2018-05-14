@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Row, Col, Carousel, Glyphicon } from 'react-bootstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import '../css/index.css'
 import '../css/category.css'

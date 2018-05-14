@@ -1,0 +1,26 @@
+.nomatch-wrap{
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 100px;
+  height: 450px;
+  /* line-height: 250px; */
+  padding: 20px;
+  border-radius: 10px;
+  border: 10px solid #ccc;
+}
+.nomatch-wrap .nomatch-tips{
+  color: blue;
+  font-size: 18px;
+}
+.nomatch-img{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+.nomatch-img>img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}

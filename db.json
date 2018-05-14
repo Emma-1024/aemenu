@@ -12,16 +12,16 @@
     { "id": 4, "url": "http://localhost:8000/img/foodshow2.jpg", "name": "草莓酸奶", "comment":"60", "like": 40, "user": "放养的小星4" }
   ],
   "cabbage": [
-    { "id": 1, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 2, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 3, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 4, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星" }
+    { "id": 1, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "手撕包菜", "comment":"10", "like": 40, "user": "放养的小星" },
+    { "id": 2, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "手撕包菜", "comment":"10", "like": 40, "user": "放养的小星" },
+    { "id": 3, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "手撕包菜", "comment":"10", "like": 40, "user": "放养的小星" },
+    { "id": 4, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "手撕包菜", "comment":"10", "like": 40, "user": "放养的小星" }
   ],
   "mushroom": [
-    { "id": 1, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 2, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 3, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 4, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星" }
+    { "id": 1, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "香菇油菜", "comment":"10", "like": 40, "user": "放养的小星" },
+    { "id": 2, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "香菇油菜", "comment":"10", "like": 40, "user": "放养的小星" },
+    { "id": 3, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "香菇油菜", "comment":"10", "like": 40, "user": "放养的小星" },
+    { "id": 4, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "香菇油菜", "comment":"10", "like": 40, "user": "放养的小星" }
   ],
   "all": [
     { "id": 1, "url": "http://localhost:8000/img/foodshow1.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星" },
