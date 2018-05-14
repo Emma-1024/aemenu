@@ -13,6 +13,7 @@ class Popup extends Component {
       repassword: '',
       tips: '',
       checked: false,
+      resinfo:'',
     }
   }
   render() {
@@ -101,6 +102,9 @@ class Popup extends Component {
         'Content-type': 'application/json'
       })
     })
+    // .then(res => {
+    //   this.setState({resinfo: res.num})
+    // })
     .then(responce => console.log('success', responce))
 
     //注册成功跳转home页，显示头像？？？？

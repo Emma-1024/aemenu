@@ -8,7 +8,9 @@ import week1 from '../images/img/week1.png'
 import week2 from '../images/img/week2.png'
 import week3 from '../images/img/week3.png'
 import mongo from '../images/img/Mango.jpg'
+import strawberry from '../images/img/strawberry.jpg'
 import cabbage from '../images/img/cabbage.jpg'
+import mushroom from '../images/img/mushroom.jpg'
 
 
 class Home extends Component {
@@ -31,11 +33,11 @@ class Home extends Component {
     this.seasonData = {
       fruit: [
         { id: 1, url: mongo, name: "mongo" },
-        { id: 2, url: mongo, name: "mongo" },
+        { id: 2, url: strawberry, name: "strawberry" },
       ],
       vegetable: [
         { id: 1, url: cabbage, name: "cabbage" },
-        { id: 2, url: cabbage, name: "cabbage" },
+        { id: 2, url: mushroom, name: "mushroom" },
       ]
     }
     this._changePhotos = this._changePhotos.bind(this)
@@ -99,8 +101,8 @@ class Home extends Component {
     return this.seasonData[category].map(item => {
       return (
         <Col xs={3} key={item.id}>
-          <Link to={`/category/season/${item.name}`}>
-            <img src={item.url} heigth={150}/>
+          <Link to={`/category/season?food=${item.name}`}>
+            <img src={item.url}/>
             <div className="cover">
               {/* <div className="itemname"> */}
                 <Glyphicon glyph="gift" className="gifticon"/>

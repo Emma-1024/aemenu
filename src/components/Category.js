@@ -3,31 +3,32 @@ import { Grid, Row, Col, Carousel, Glyphicon } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import '../css/index.css'
 import '../css/category.css'
+import gerUrlSearchKey from '../common/getUrlSearchKey'
 
 const Category = () => (
   <Router>
     <div>
-      <OldSchoolMenuLink path="/category/season/:name" label="Season" />
-      <OldSchoolMenuLink path="/category/day" label="Day" />
-      <OldSchoolMenuLink path="/category/week" label="Week" />
+      <DishLink path="/category/season" label="Season" />
+      <DishLink path="/category/day" label="Day" />
+      <DishLink path="/category/week" label="Week" />
       <hr />
-      <Route path="/category/season/:name" component={Season} />
+      <Route path="/category/season" component={Season} />
       <Route path="/category/day" component={Day} />
       <Route path="/category/week" component={Week} />
     </div>
   </Router>
 );
 
-const OldSchoolMenuLink = ({ label, path }) => {
+const DishLink = ({ label, path }) => {
   return (
     <Route
       path={path}
       children={({ match, location }) => {
-        console.log(location.pathname)
-        return(
+        // console.log(location.pathname)
+        return (
           <div className={match ? "active" : ""}>
             {match ? "> " : ""}
-            <Link to={location.pathname}>{label}</Link>
+            <Link to={path}>{label}</Link>
           </div>
         )
       }}
@@ -36,27 +37,43 @@ const OldSchoolMenuLink = ({ label, path }) => {
 }
 
 class Season extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       seasonData: []
     }
+    this.prevFetchState = null
+    this.date = new Date()
   }
-  componentDidMount() {
-    this.fetchData()
+
+  detectData() {
+    if (this.props.location.search === '') {
+      if (this.prevFetchState === '' && Date.now() - this.date < 600000) return
+      this.prevFetchState = ''
+      this.date = new Date()
+      this.fetchData('all')
+    } else {
+      var param = gerUrlSearchKey(this.props.location.search).food
+      if (this.prevFetchState === param && Date.now() - this.date < 600000) return
+      this.prevFetchState = param
+      this.date = new Date()
+      this.fetchData(param)
+    }
   }
-  fetchData() {
-    fetch(`${process.env.REACT_APP_BASEURL}/${this.props.match.params.name}`)
+  fetchData(param) {
+    console.log('fetch')
+    fetch(`${process.env.REACT_APP_BASEURL}/${param}`)
       .then(res => res.json())
       .then(data => {
-        console.log('数据', data)
         this.setState({
           seasonData: data
         })
-        console.log(this.state.seasonData)
+        // console.log(this.state.seasonData)
       })
   }
+
   render() {
+    this.detectData()
     return (
       <div>
         <Grid container="true">
