@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import '../css/index.css'
 import '../css/category.css'
-import gerUrlSearchKey from '../common/getUrlSearchKey'
+import getUrl from '../common/getUrlSearchKey'
 
 const Category = () => (
   <Router>
@@ -26,7 +26,7 @@ const DishLink = ({ label, path }) => {
       children={({ match, location }) => {
         // console.log(location.pathname)
         return (
-          <div className={match ? "active" : ""}>
+          <div className={match ? "active" : "a-wrap"}>
             {match ? "> " : ""}
             <Link to={path}>{label}</Link>
           </div>
@@ -46,22 +46,26 @@ class Season extends Component {
     this.date = new Date()
   }
 
-  detectData() {
+  detectData(objKey) {
     if (this.props.location.search === '') {
       if (this.prevFetchState === '' && Date.now() - this.date < 600000) return
       this.prevFetchState = ''
       this.date = new Date()
       this.fetchData('all')
-    } else {
-      var param = gerUrlSearchKey(this.props.location.search).food
-      if (this.prevFetchState === param && Date.now() - this.date < 600000) return
-      this.prevFetchState = param
-      this.date = new Date()
-      this.fetchData(param)
+    } else{
+      var param = getUrl.getUrlSearchKey(this.props.location.search, "food")
+      if(!param){
+        this.fetchData('all')
+      }else{
+        if (this.prevFetchState === param && Date.now() - this.date < 600000) return
+        this.prevFetchState = param
+        this.date = new Date()
+        this.fetchData(param)
+      }
     }
   }
   fetchData(param) {
-    console.log('fetch')
+    // console.log('fetch')
     fetch(`${process.env.REACT_APP_BASEURL}/${param}`)
       .then(res => res.json())
       .then(data => {

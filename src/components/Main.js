@@ -18,7 +18,6 @@ class Main extends Component{
             <Route exact path="/" component={Home}></Route>
             <Route path="/category" component={Category}></Route>
             <Route path="/diymenu" component={Diymenu}></Route>
-            {/* <Route path="/login" component={PopupLogin}></Route> */}
             <Route path="/login" component={RedirectExample}></Route>
             <Route component={NoMatch}></Route>
           </Switch>
