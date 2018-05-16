@@ -16,7 +16,6 @@ class Login extends Component {
   render() {
     return (
       <div className="loginmodel">
-        {/* <NavLink to="/login" className="login">登录</NavLink> */}
         <span className="login" onClick={this._togglePopup.bind(this)}>登录</span>
         {this.state.showPopup ?
           <div>

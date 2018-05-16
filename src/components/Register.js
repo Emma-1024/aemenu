@@ -102,20 +102,24 @@ class Popup extends Component {
         'Content-type': 'application/json'
       })
     })
-    // .then(res => {
-    //   this.setState({resinfo: res.num})
-    // })
-    .then(responce => console.log('success', responce))
+    .then(res => res.json())
+    .then(data => {
+      if(data.success) {
+        this.setState({tips: '恭喜注册成功!3秒后跳转页面'})
+        this._animate(this.props.closePopup)
+      }
+    })
 
     //注册成功跳转home页，显示头像？？？？
   }
 
 
   /*2秒动画消失*/
-  _animate() {
+  _animate(callback) {
     this._animateId = setTimeout(()=>{
      this.setState({tips: ''})
-    },2000)
+     callback()
+    },3000)
   }
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, ButtonToolbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import '../css/diymenu.css'
 import PopupLogin from './PopupLogin'
+// import LoginProtect from './LoginProtect'
 import eventManager from '../common/eventModule'
 
 

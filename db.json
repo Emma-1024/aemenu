@@ -1,32 +1,225 @@
 {
   "mongo": [
-    { "id": 1, "url": "http://localhost:8000/img/foodshow1.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星1" },
-    { "id": 2, "url": "http://localhost:8000/img/foodshow1.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星2" },
-    { "id": 3, "url": "http://localhost:8000/img/foodshow1.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星3" },
-    { "id": 4, "url": "http://localhost:8000/img/foodshow1.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星4" }
+    {
+      "id": 1,
+      "url": "http://localhost:8000/img/foodshow1.jpg",
+      "name": "芒果椰子奶冻",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星1"
+    },
+    {
+      "id": 2,
+      "url": "http://localhost:8000/img/foodshow1.jpg",
+      "name": "芒果椰子奶冻",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星2"
+    },
+    {
+      "id": 3,
+      "url": "http://localhost:8000/img/foodshow1.jpg",
+      "name": "芒果椰子奶冻",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星3"
+    },
+    {
+      "id": 4,
+      "url": "http://localhost:8000/img/foodshow1.jpg",
+      "name": "芒果椰子奶冻",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星4"
+    }
   ],
   "strawberry": [
-    { "id": 1, "url": "http://localhost:8000/img/foodshow2.jpg", "name": "草莓酸奶", "comment":"1", "like": 40, "user": "放养的小星1" },
-    { "id": 2, "url": "http://localhost:8000/img/foodshow2.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星2" },
-    { "id": 3, "url": "http://localhost:8000/img/foodshow2.jpg", "name": "草莓酸奶", "comment":"14", "like": 40, "user": "放养的小星3" },
-    { "id": 4, "url": "http://localhost:8000/img/foodshow2.jpg", "name": "草莓酸奶", "comment":"60", "like": 40, "user": "放养的小星4" }
+    {
+      "id": 1,
+      "url": "http://localhost:8000/img/foodshow2.jpg",
+      "name": "草莓酸奶",
+      "comment": "1",
+      "like": 40,
+      "user": "放养的小星1"
+    },
+    {
+      "id": 2,
+      "url": "http://localhost:8000/img/foodshow2.jpg",
+      "name": "草莓酸奶",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星2"
+    },
+    {
+      "id": 3,
+      "url": "http://localhost:8000/img/foodshow2.jpg",
+      "name": "草莓酸奶",
+      "comment": "14",
+      "like": 40,
+      "user": "放养的小星3"
+    },
+    {
+      "id": 4,
+      "url": "http://localhost:8000/img/foodshow2.jpg",
+      "name": "草莓酸奶",
+      "comment": "60",
+      "like": 40,
+      "user": "放养的小星4"
+    }
   ],
   "cabbage": [
-    { "id": 1, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "手撕包菜", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 2, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "手撕包菜", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 3, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "手撕包菜", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 4, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "手撕包菜", "comment":"10", "like": 40, "user": "放养的小星" }
+    {
+      "id": 1,
+      "url": "http://localhost:8000/img/foodshow3.jpg",
+      "name": "手撕包菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    },
+    {
+      "id": 2,
+      "url": "http://localhost:8000/img/foodshow3.jpg",
+      "name": "手撕包菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    },
+    {
+      "id": 3,
+      "url": "http://localhost:8000/img/foodshow3.jpg",
+      "name": "手撕包菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    },
+    {
+      "id": 4,
+      "url": "http://localhost:8000/img/foodshow3.jpg",
+      "name": "手撕包菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    }
   ],
   "mushroom": [
-    { "id": 1, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "香菇油菜", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 2, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "香菇油菜", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 3, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "香菇油菜", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 4, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "香菇油菜", "comment":"10", "like": 40, "user": "放养的小星" }
+    {
+      "id": 1,
+      "url": "http://localhost:8000/img/foodshow4.jpg",
+      "name": "香菇油菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    },
+    {
+      "id": 2,
+      "url": "http://localhost:8000/img/foodshow4.jpg",
+      "name": "香菇油菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    },
+    {
+      "id": 3,
+      "url": "http://localhost:8000/img/foodshow4.jpg",
+      "name": "香菇油菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    },
+    {
+      "id": 4,
+      "url": "http://localhost:8000/img/foodshow4.jpg",
+      "name": "香菇油菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    }
   ],
   "all": [
-    { "id": 1, "url": "http://localhost:8000/img/foodshow1.jpg", "name": "芒果椰子奶冻", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 2, "url": "http://localhost:8000/img/foodshow2.jpg", "name": "草莓酸奶", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 3, "url": "http://localhost:8000/img/foodshow3.jpg", "name": "手撕包菜", "comment":"10", "like": 40, "user": "放养的小星" },
-    { "id": 4, "url": "http://localhost:8000/img/foodshow4.jpg", "name": "香菇油菜", "comment":"10", "like": 40, "user": "放养的小星" }
-  ]
+    {
+      "id": 1,
+      "url": "http://localhost:8000/img/foodshow1.jpg",
+      "name": "芒果椰子奶冻",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    },
+    {
+      "id": 2,
+      "url": "http://localhost:8000/img/foodshow2.jpg",
+      "name": "草莓酸奶",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    },
+    {
+      "id": 3,
+      "url": "http://localhost:8000/img/foodshow3.jpg",
+      "name": "手撕包菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    },
+    {
+      "id": 4,
+      "url": "http://localhost:8000/img/foodshow4.jpg",
+      "name": "香菇油菜",
+      "comment": "10",
+      "like": 40,
+      "user": "放养的小星"
+    }
+  ],
+  "baskets": [
+    {
+      "_id": "5af0046b82495f3e047c5b3b",
+      "user_id": "5af0046b82495f3e047c5b3b",
+      "items": [
+        {
+          "menu_id": "5af0046b82495f3e047c5b3b",
+          "ingredients": {
+            "ingredient_id": "5af0046b82495f3e047c5b3b",
+            "ingredientWeights": 100
+          }
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "_id": "5aefff8982495f3e047c5b37",
+      "name": "黄瓜",
+      "category": "蔬菜",
+      "img": "",
+      "weightUnit": 50,
+      "meteredUnit": "根"
+    }
+  ],
+  "menus": [
+    {
+      "_id": "5af001b182495f3e047c5b38",
+      "user_id": "5af0027582495f3e047c5b39",
+      "name": "辣炒蚬子",
+      "img": "",
+      "ingredients": {
+        "ingredient_id": "5af0046b82495f3e047c5b3b",
+        "ingredientWeight": ""
+      },
+      "introduction": ""
+    }
+  ],
+  "users": [
+    {
+      "_id": "5aeffd5c82495f3e047c5b36",
+      "name": "username",
+      "password": "md5",
+      "nickname": "",
+      "email": "",
+      "avatar": "",
+      "registrationTime": "2018-11-05T00:00:00.000Z"
+    }
+  ],
+  "login": {
+    "code": 200,
+    "success": true
+  }
 }

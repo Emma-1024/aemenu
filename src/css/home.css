@@ -1,5 +1,5 @@
 .Carousel {
-  background-color: rgb(189, 224, 238);
+  background-color: rgb(175, 250, 246);
 }
 
 .Carousel img {
@@ -28,7 +28,7 @@
 .season .toggleBtn>span {
   display: inline-block;
   width: 50px;
-  height: 30px;
+  height: 33px;
   margin-right: 20px;
   line-height: 30px;
   text-align: center;

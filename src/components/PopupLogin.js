@@ -86,13 +86,26 @@ class PopupLogin extends Component {
       this._animate()
       return
     }
+    var uPattern = /^[a-zA-Z0-9_]{4,20}$/
+    if(!uPattern.test(this.state.username)){
+      this.setState({tips: '用户名必须4-16位并且包含字母,数字,下划线'})
+      this._animate()
+      return
+    }
     if(this.state.password === ''){
       this.setState({tips: '密码不能为空'})
       this._animate()
       return
     }
     //#endregion
-
+    // fetch(`${process.env.REACT_APP_BASEURL}/login`)
+    // .then(res => res.json())
+    // .then( data => {
+    //   if(data.success){
+    //     console.log('已经登录了')
+    //     this.props.closePopup()
+    //   }
+    // })
     //发送fetch请求
     // 当选择了下次自动登录的时候，判断如果登录成功，就将用户名密码存入cookie中
     //TODO

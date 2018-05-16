@@ -1,0 +1,42 @@
+.user-wrap{
+  display: table-cell;
+  width: 100%;
+}
+.avatar{
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.avatar>img{
+  display: block;
+  width: 100%;
+}
+.userinfo>span{
+  margin-left: 40px;
+  cursor: pointer;
+}
+.userinfo>span:hover{
+  color: blue;
+}
+.info-list{
+  text-align: center;
+  background-color: rgb(188, 232, 252);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.info-list>div{
+  line-height: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+.info-list .glyphicon{
+  margin-right: 10px;
+  color: #777
+}
+.info-list>div:hover{
+  color: #fff;
+}
+.info-list>div:not(:nth-child(1)){
+  border-top: 1px solid #ccc;
+}

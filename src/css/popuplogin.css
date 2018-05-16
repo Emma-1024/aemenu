@@ -42,11 +42,20 @@
 .middle {
   margin: 0 auto;
   display: table;
+  height: 70px;
+  line-height: 70px;
 }
 p.middle{
   color: red;
   cursor: pointer;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
 }
 .loginitem>a:hover{
   color: skyblue;
+}
+.loginitem:nth-child(3) {
+  line-height: 70px;
+  height: 70px;
 }

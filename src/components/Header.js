@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 import Login from './Login'
 import Register from './Register'
+import User from './User'
 import '../css/header.css'
 
 class Header extends Component {
@@ -26,8 +27,11 @@ class Header extends Component {
             </Col>
             <Col xs={5}>
               <div className="App-user pull-right" >
-                <Login></Login>
-                <Register></Register>
+                {/* 判断用户是否已经登录，没有登录 */}
+                {/* <Login></Login>
+                <Register></Register> */}
+                {/* 登录则显示 */} 
+                <User></User>
               </div>
             </Col>
           </Row>

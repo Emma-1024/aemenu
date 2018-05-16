@@ -29,9 +29,6 @@ class Nav extends Component {
               <li>
                 <NavLink to="/diymenu" activeClassName="selected"><span>DIY菜单</span></NavLink>
               </li>
-              <li>
-                <NavLink to="/login" activeClassName="selected"><span>RedirectExample</span></NavLink>
-              </li>
             </ul>
           </Row>
           {/* 暂时删除 */}
