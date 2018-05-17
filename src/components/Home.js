@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Grid, Row, Col, Carousel, Glyphicon } from 'react-bootstrap'
+import { Grid, Row, Col, Carousel, Glyphicon, Button } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import axios from 'axios'
 import '../css/home.css'
 
 // for temporal use
@@ -45,6 +46,8 @@ class Home extends Component {
   render() {
     return (
       <div>
+        {/* test按钮 */}
+        <Button onClick={this._test.bind(this)}>test</Button>
         {/* 轮播图 */}
         <Grid container="true">
           <Row>
@@ -86,7 +89,7 @@ class Home extends Component {
       return (
         <Carousel.Item key={item.id}>
           {/* <img width={900} height={500} alt="900x500" src={item.url} /> */}
-          <img width={900} height={500} src={item.url}/>
+          <img width={900} height={500} src={item.url} />
           <Carousel.Caption>
             <h3>{item.name}</h3>
             <p>{item.description}</p>
@@ -102,11 +105,11 @@ class Home extends Component {
       return (
         <Col xs={3} key={item.id}>
           <Link to={`/category/season?food=${item.name}`}>
-            <img src={item.url}/>
+            <img src={item.url} />
             <div className="cover">
               {/* <div className="itemname"> */}
-                <Glyphicon glyph="gift" className="gifticon"/>
-                <span className="itemname"> {item.name}</span>
+              <Glyphicon glyph="gift" className="gifticon" />
+              <span className="itemname"> {item.name}</span>
               {/* </div> */}
             </div>
           </Link>
@@ -118,12 +121,35 @@ class Home extends Component {
   _changePhotos(category, index) {
     this.setState({ category: category })
     var active = this.state.active
-    active.forEach( (item,index) => {
+    active.forEach((item, index) => {
       active[index] = ''
     })
     active[index] = 'active'
     this.setState({ active: active })
   }
+
+  _test() {
+    fetch(`${process.env.REACT_APP_BACKENDURL}/test`,
+      {
+        method: 'GET',
+        credentials: 'include',
+        // body: JSON.stringify(data),
+        // headers: new Headers({
+        //   'Content-Type': 'application/json'
+        // })
+      })
+      .then(res => res.json())
+      .then(info => {
+        console.log(info)
+      })
+  }
+  // _test() {
+  //   var url = `${process.env.REACT_APP_BACKENDURL}/test`
+  //   axios.get(url)
+  //   .then(info => {
+  //     console.log(info)
+  //   })
+  // }
 }
 
 export default Home

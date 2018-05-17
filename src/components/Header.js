@@ -15,6 +15,9 @@ class Header extends Component {
     this._loginState = this._loginState.bind(this, 'true')
     eventManager.subscribe('isAuthenticated', this._loginState)
   }
+  componentWillUnmount(){
+    eventManager.removeSubscriber('isAuthenticated', this._loginState)
+  }
   render() {
     console.log('111',this.state.loginState)
     return (
@@ -38,9 +41,11 @@ class Header extends Component {
             <Col xs={5}>
               <div className="App-user pull-right" >
               {this.state.loginState ?
-                <User></User>
-                // <Register></Register>)
-              : <Login></Login>
+                  <User></User>
+              : (<div>
+                  <Login></Login>
+                  <Register></Register>
+                </div>)
               }
               </div>
             </Col>

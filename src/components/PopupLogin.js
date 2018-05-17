@@ -102,7 +102,6 @@ class PopupLogin extends Component {
     // 发送请求
     let data = { username: this.state.username, password: md5(this.state.password) }
     getData.call(this, data, 'login').then((info) => {
-      console.log('222',info)
       if (info.success) {
         this.setState({ tips: '登录成功!3秒后跳转页面' })
         this._animate(this.props.closePopup)
@@ -112,18 +111,7 @@ class PopupLogin extends Component {
     function isLogin(){
       eventManager.publish('isAuthenticated')
     }
-
-
-    // fetch(`${process.env.REACT_APP_BASEURL}/login`)
-    // .then(res => res.json())
-    // .then( data => {
-    //   if(data.success){
-    //     console.log('已经登录了')
-    //     this.props.closePopup()
-    //   }
-    // })
     //确定用户名是否存在，其他返回信息的话返回一个未知错误页面
-    //发送fetch请求
     // 当选择了下次自动登录的时候，判断如果登录成功，就将用户名密码存入cookie中
     //TODO
 
@@ -140,9 +128,6 @@ class PopupLogin extends Component {
       }
     }, 3000)
   }
-  // _togglePopup(){
-  //   history.goBack()
-  // }
   //TODO
   //当点击登录按钮之后，若登陆成功则返回用户信息  ？？？
 

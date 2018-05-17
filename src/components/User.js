@@ -53,6 +53,7 @@ class User extends Component {
     })
   }
   _logout() {
+    
   }
 }
 
