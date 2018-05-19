@@ -7,6 +7,7 @@
   background-color: rgb(186, 218, 231);
   /* margin-top: 500px; */
   height: 100px;
+  z-index: 999;
 }
 .footer h4 {
   font-style: italic;

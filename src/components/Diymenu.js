@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, ButtonToolbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import '../css/diymenu.css'
 import PopupLogin from './PopupLogin'
+import isLogin from '../common/IsLogin'
 // import LoginProtect from './LoginProtect'
 import eventManager from '../common/eventModule'
 
@@ -19,8 +20,10 @@ class Diymenu extends Component {
       ingredientName: '',
       ingredientNum: '',
       ingredientList: [],
+      isLoginResult: ''
     }
     this.basketListObj = testData.basketListJSON || {}
+    // this._loginIsOrNo()
 
     //添加判断是否登录的方法
     // 如果没有登录则返回false，登录则返回true
@@ -144,6 +147,16 @@ class Diymenu extends Component {
     // localStorage.setItem('basketListObj', JSON.stringify(this.basketListObj))
     // console.log(this.basketListObj)
   }
+  _loginIsOrNo(){
+    // let isLoginResult
+    isLogin().then(result=> {
+      // isLoginResult=result
+      this.setState({
+        isLoginResult: result
+      })
+    })
+    console.log(this.state.isLoginResult)
+  }
 }
 const tooltip = (
   <Tooltip id="tooltip">
@@ -207,26 +220,6 @@ class ShowBasketList extends Component {
     this.setState({
       data: this.state.data
     })
-
-    // data test
-    // #region Get
-    // fetch('http://192.168.1.44:8080/test')
-    //   .then(res=>res.json())
-    //   .then(json=>console.log(json))
-    // #endregion
-
-    //#region Post
-    // var data = {username: 'example'}
-    // fetch('http://192.168.1.44:8080/blob',{
-    //   method: 'POST',
-    //   body: JSON.stringify(data),
-    //   headers: new Headers({
-    //     'Content-Type': 'application/json'
-    //   })
-    // })
-    // .then(res => res.json())
-    // .then(response => console.log('success:', response))
-    // #endregion
   }
   _deleteItem(keyprop, index) {
     this.state.data[keyprop].splice(index,1)

@@ -6,6 +6,7 @@
   opacity: 0.8;
 }
 .season-list{
+  margin-bottom: 10px;
   background-color: #000;
 }
 .season-list>a{

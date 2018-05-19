@@ -13,6 +13,7 @@ class PopupLogin extends Component {
     this.state = {
       username: '',
       password: '',
+      isChecked: false,
     }
   }
   render() {
@@ -29,7 +30,7 @@ class PopupLogin extends Component {
             </div>
             <div className="loginitem">
               <label>
-                <input type="checkbox" className="check" />下次自动登录
+                <input type="checkbox" name="rememberme" className="check" checked={ this.state.isChecked } onChange={ (e)=>this._handleInputChange(e) }/>下次自动登录
               </label>
               <a href="">忘记密码?</a>
             </div>
@@ -79,6 +80,10 @@ class PopupLogin extends Component {
   _handlePassword(e) {
     this.setState({ password: e.target.value })
   }
+  _handleInputChange(e) {
+    this.setState({isChecked: e.target.checked})
+    console.log('111',e.target.checked)
+  }
   _submit() {
     //简单验证
     //#region
@@ -100,7 +105,7 @@ class PopupLogin extends Component {
     }
     //#endregion
     // 发送请求
-    let data = { username: this.state.username, password: md5(this.state.password) }
+    let data = { username: this.state.username, password: md5(this.state.password), rememberme: this.state.isChecked }
     getData.call(this, data, 'login').then((info) => {
       if (info.success) {
         this.setState({ tips: '登录成功!3秒后跳转页面' })
