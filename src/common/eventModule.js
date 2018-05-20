@@ -1,3 +1,5 @@
+import events from './event'
+
 class EventManager {
   constructor() {
     this.eventList = {}
@@ -28,7 +30,7 @@ class EventManager {
   }
 
   removeAll(...eventNames) {
-    eventNames.forEach(name=>{
+    eventNames.forEach(name => {
       this.eventList[name] = undefined
     })
   }
@@ -40,4 +42,6 @@ class EventManager {
 }
 
 var eventManager = new EventManager()
+
 export default eventManager
+export { events }

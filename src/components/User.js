@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import { Glyphicon } from 'react-bootstrap'
+import { Redirect } from "react-router-dom"
+import createBrowserHistory from 'history/createBrowserHistory'
 import '../css/user.css'
 import defaultPhoto from '../images/img/default.png'
+import checkLogin from '../common/checkLogin'
 
+const history = createBrowserHistory()
 class User extends Component {
   constructor(props) {
     super(props)
@@ -38,8 +42,8 @@ class User extends Component {
             <div>
               <Glyphicon glyph="info-sign" /><span>关于</span>
             </div>
-            <div>
-              <Glyphicon glyph="log-out" onClick={this._logout.bind(this)} /><span>登出</span>
+            <div onClick={this._logout.bind(this)}>
+              <Glyphicon glyph="log-out"/><span>登出</span>
             </div>
           </div>
           : null
@@ -53,7 +57,9 @@ class User extends Component {
     })
   }
   _logout() {
-    
+    checkLogin('logout').then(res=>console.log(res))
+    // history.push('/')
+    history.goBack()
   }
 }
 

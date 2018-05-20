@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
-import eventManager from '../common/eventModule'
+import eventManager, { events } from '../common/eventModule'
+import checkLogin from '../common/checkLogin'
 import Login from './Login'
 import Register from './Register'
 import User from './User'
@@ -10,14 +11,15 @@ class Header extends Component {
   constructor() {
     super()
     this.state = {
-      loginState: false
+      isLoginResult: false
     }
-    this._loginState = this._loginState.bind(this, 'true')
-    eventManager.subscribe('isAuthenticated', this._loginState)
+    this._isLoginOrNot()
+    // this._getLoginState = this._getLoginState.bind(this, 'true')
+    // eventManager.subscribe(events.isAuthenticated, this._getLoginState)
   }
-  componentWillUnmount() {
-    eventManager.removeSubscriber('isAuthenticated', this._loginState)
-  }
+  // componentWillUnmount() {
+  //   eventManager.removeSubscriber(events.isAuthenticated, this._getLoginState)
+  // }
   render() {
     // console.log('111',this.state.loginState)
     return (
@@ -40,7 +42,7 @@ class Header extends Component {
             </Col>
             <Col xs={5}>
               <div className="App-user pull-right" >
-                {this.state.loginState ?
+                {this.state.isLoginResult ?
                   <User></User>
                   : (<div>
                     <Login></Login>
@@ -54,9 +56,17 @@ class Header extends Component {
       </div>
     )
   }
-  _loginState(boole) {
-    this.setState({
-      loginState: boole
+  // _getLoginState(boole) {
+  //   this.setState({
+  //     loginState: boole
+  //   })
+  // }
+  _isLoginOrNot() {
+    checkLogin('isLogin').then(result => {
+      this.setState({
+        isLoginResult: result.success
+      })
+      console.log('isLogin', result)
     })
   }
 }

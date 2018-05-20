@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route} from "react-router-dom"
 import { Grid } from 'react-bootstrap'
-import LoginProtect from './LoginProtect'
-import isLogin from '../common/IsLogin'
 
 import Home from './Home'
 import Category from './Category'

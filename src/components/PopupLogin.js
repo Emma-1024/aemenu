@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Button, Glyphicon } from 'react-bootstrap'
-// import createHistory from "history/createBrowserHistory"
+import createHistory from "history/createBrowserHistory"
 import md5 from '../utility/md5'
-import eventManager from '../common/eventModule'
+import eventManager,{ events } from '../common/eventModule'
 import getData from '../common/getData'
 import '../css/popuplogin.css'
 
-// const history = createHistory()
+const history = createHistory()
 class PopupLogin extends Component {
   constructor() {
     super()
@@ -82,7 +82,7 @@ class PopupLogin extends Component {
   }
   _handleInputChange(e) {
     this.setState({isChecked: e.target.checked})
-    console.log('111',e.target.checked)
+    // console.log('111',e.target.checked)
   }
   _submit() {
     //简单验证
@@ -110,12 +110,13 @@ class PopupLogin extends Component {
       if (info.success) {
         this.setState({ tips: '登录成功!3秒后跳转页面' })
         this._animate(this.props.closePopup)
-        isLogin.call(this)
+        // isLogin.call(this)
+        history.goBack()
       }
     })
-    function isLogin(){
-      eventManager.publish('isAuthenticated')
-    }
+    // function isLogin(){
+    //   eventManager.publish(events.isAuthenticated)
+    // }
     //确定用户名是否存在，其他返回信息的话返回一个未知错误页面
     // 当选择了下次自动登录的时候，判断如果登录成功，就将用户名密码存入cookie中
     //TODO
@@ -138,7 +139,7 @@ class PopupLogin extends Component {
 
 
   _jump2register() {
-    eventManager.publish('jump2register')
+    eventManager.publish(events.jump2register)
     this.props.closePopup()
   }
 

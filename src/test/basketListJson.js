@@ -1,15 +1,16 @@
-var basketListJSON = {
-  "西红柿炒鸡蛋": [
-    { ingredientName: "西红柿", ingredientNum: "2个" },
-    { ingredientName: "鸡蛋", ingredientNum: "4个" }
-  ],
-  "爆炒土豆丝": [
-    {ingredientName: "土豆", ingredientNum: "3个"}
-  ]
+function CreateBasketListJson(){
+  var basketListJSON = {
+    "西红柿炒鸡蛋": [
+      { ingredientName: "西红柿", ingredientNum: "2个" },
+      { ingredientName: "鸡蛋", ingredientNum: "4个" }
+    ],
+    "爆炒土豆丝": [
+      {ingredientName: "土豆", ingredientNum: "3个"}
+    ]
+  }
+  return basketListJSON
 }
 
-var data={}
-data.basketListJSON = basketListJSON
 // basketListJSON = [
 //   {"itemName": "西红柿炒鸡蛋",
 //   "ingredients": [
@@ -21,4 +22,4 @@ data.basketListJSON = basketListJSON
 //   ]
 // ]
 
-export default data
+export default CreateBasketListJson

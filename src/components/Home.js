@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col, Carousel, Glyphicon, Button } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import axios from 'axios'
 import '../css/home.css'
 
 // for temporal use

@@ -6,8 +6,8 @@
   /* margin-top: 100px; */
   background-color: rgb(186, 218, 231);
   /* margin-top: 500px; */
-  height: 100px;
-  z-index: 999;
+  height: 60px;
+  z-index: 100;
 }
 .footer h4 {
   font-style: italic;
@@ -17,14 +17,18 @@
 .gotop {
   position: fixed;
   right: 50px;
-  bottom: 10px;
+  bottom: 50px;
   font-size: 50px;
   cursor: pointer;
   transition: all 0.5 linear;
+  z-index: 101;
 }
 .link {
   line-height: 30px;
 }
 .link a:hover {
   color: #fff;
+}
+.recruit{
+  padding-right: 30px;
 }
