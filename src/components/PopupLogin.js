@@ -110,8 +110,8 @@ class PopupLogin extends Component {
       if (info.success) {
         this.setState({ tips: '登录成功!3秒后跳转页面' })
         this._animate(this.props.closePopup)
-        // isLogin.call(this)
-        history.goBack()
+        // isLogin.call(this) 
+        window.location.reload()
       }
     })
     // function isLogin(){

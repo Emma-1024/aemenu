@@ -13,7 +13,7 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "set PORT=8000& set REACT_APP_BACKENDURL=http://192.168.1.44:8080& set REACT_APP_BASEURL=http://localhost:3000& react-scripts start",
+    "start": "set PORT=8000& set REACT_APP_BACKENDURL=http://localhost:8080& set REACT_APP_BASEURL=http://localhost:3000& react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",

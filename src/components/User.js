@@ -59,7 +59,7 @@ class User extends Component {
   _logout() {
     checkLogin('logout').then(res=>console.log(res))
     // history.push('/')
-    history.goBack()
+    window.location.reload()
   }
 }
 
