@@ -12,6 +12,8 @@ import strawberry from '../images/img/strawberry.jpg'
 import cabbage from '../images/img/cabbage.jpg'
 import mushroom from '../images/img/mushroom.jpg'
 
+//TODO TEMP
+import TestComponent from '../test/testComponent'
 
 class Home extends Component {
   constructor() {
@@ -46,8 +48,8 @@ class Home extends Component {
     return (
       <div>
         {/* test按钮 */}
-        <Button onClick={this._test.bind(this)}>test</Button>
-        <Button onClick={this._logout.bind(this)}>logout</Button>
+        <TestComponent />
+
         {/* 轮播图 */}
         <Grid container="true">
           <Row>

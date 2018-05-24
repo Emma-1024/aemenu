@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "babel-preset-stage-2": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1"
+    "babel-preset-stage-3": "^6.24.1",
+    "jest-fetch-mock": "^1.6.1"
   }
 }

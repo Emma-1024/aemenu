@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom"
 import createBrowserHistory from 'history/createBrowserHistory'
 import '../css/user.css'
 import defaultPhoto from '../images/img/default.png'
-import checkLogin from '../common/checkLogin'
+import { get } from '../common/getData'
 
 const history = createBrowserHistory()
 class User extends Component {
@@ -43,7 +43,7 @@ class User extends Component {
               <Glyphicon glyph="info-sign" /><span>关于</span>
             </div>
             <div onClick={this._logout.bind(this)}>
-              <Glyphicon glyph="log-out"/><span>登出</span>
+              <Glyphicon glyph="log-out" /><span>登出</span>
             </div>
           </div>
           : null
@@ -57,7 +57,7 @@ class User extends Component {
     })
   }
   _logout() {
-    checkLogin('logout').then(res=>console.log(res))
+    get('logout').then(res => console.log(res))
     // history.push('/')
     window.location.reload()
   }

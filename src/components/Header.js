@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 import eventManager, { events } from '../common/eventModule'
-import checkLogin from '../common/checkLogin'
+import isAuthenticated from '../common/auth'
 import Login from './Login'
 import Register from './Register'
 import User from './User'
@@ -62,7 +62,7 @@ class Header extends Component {
   //   })
   // }
   _isLoginOrNot() {
-    checkLogin('isLogin').then(result => {
+    isAuthenticated().then(result => {
       this.setState({
         isLoginResult: result.success
       })
