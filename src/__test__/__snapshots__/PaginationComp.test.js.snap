@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaginationComp Test 1`] = `
+<div>
+  <div
+    className="container"
+    container="true"
+  >
+    <div
+      className="row"
+    >
+      <ul
+        className="pagination pagination-lg"
+      />
+      <br />
+    </div>
+  </div>
+</div>
+`;

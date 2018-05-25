@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import checkLogin from '../common/checkLogin'
 import '../css/diymenu.css'
-// import PopupLogin from './PopupLogin'
-// import checkLogin from '../common/checkLogin'
 import eventManager, { events } from '../common/eventModule'
 import Addmenu from '../components/Addmenu'
-
+import isAuthenticated from '../common/auth'
 
 // TODO TEST
 // import CreateBasketListJson from '../test/basketListJson'
@@ -25,10 +22,6 @@ class Diymenu extends Component {
       basketListObj: {}
     }
     this._isLoginOrNot()
-    // this.basketListObj = CreateBasketListJson  || {}
-    //添加判断是否登录的方法
-    // 如果没有登录则返回false，登录则返回true
-
   }
   render() {
     return (
@@ -74,7 +67,7 @@ class Diymenu extends Component {
     // console.log(this.basketListObj)
   }
   _isLoginOrNot() {
-    checkLogin('isLogin').then(result => {
+    isAuthenticated().then(result => {
       this.setState({
         isLoginResult: result.success
       })
@@ -82,6 +75,7 @@ class Diymenu extends Component {
     })
   }
 }
+
 class ShowBasketList extends Component {
   constructor(props) {
     super(props)

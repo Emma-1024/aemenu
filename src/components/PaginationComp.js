@@ -1,48 +1,61 @@
 import React, { Component } from 'react'
-import { Grid, Row } from 'react-bootstrap'
-import { Pagination } from "react-bootstrap";
+import { Grid, Row, Pagination } from 'react-bootstrap'
+
 
 class PaginationComp extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      active: 1
+      active: 1,
+      indexObj: { param: 'all', start: 0, end: 0 }
     }
-    this._forItems()
   }
+
   render() {
+    this._forItems()
     return (
       <div>
         <Grid container="true">
-            <Row>
-              <Pagination bsSize="large">{this.items}</Pagination>
-              <br />
-            </Row>
+          <Row>
+            <Pagination bsSize="large">{this.items}</Pagination>
+            <br />
+          </Row>
         </Grid>
       </div>
     )
   }
-  _forItems(page) {
+
+  _forItems() {
     this.items = []
-    fetch(`${process.env.REACT_APP_BASEURL}/all`)
-      .then(res => res.json())
-      .then(info => {
-        let onePage = 8
-        let totalData = info.length
-        let pageNumber = Math.ceil(totalData / onePage)
-        for (let number = 1; number <= pageNumber; number++) {
-          this.items.push(
-            <Pagination.Item onClick={ ()=>this._pageClick(totalData, pageNumber, onePage, number)} active={number === this.state.active} key={number}>{number}</Pagination.Item>
-          )
-        }
-        this.setState({
-          active: 1
-        })
-      })
+    let obj = this.props.data
+    let totalData = obj.seasonAllData.length
+    let param = obj.seasonParam
+    let onePage = obj.end
+    let pageNumber = Math.ceil(totalData / onePage)
+    for (let number = 1; number <= pageNumber; number++) {
+      this.items.push(
+        <Pagination.Item
+          onClick={() => this._pageClick(param, number, onePage)}
+          active={number === this.state.active}
+          key={number}
+        >
+          {number}
+        </Pagination.Item>
+      )
+    }
   }
-  _pageClick(totalData, pageNumber, onePage, number){
-    //1--7 2--13 3--23
-    //如果是第二页那么25-（2-1）*8=17   25/3=4
+
+  _pageClick(param, pageNumber, onePage) {
+    // console.log(param)
+    let start = (pageNumber - 1) * onePage
+    let end = start + onePage
+    let obj = { param: param, start: start, end: end }
+    this.setState({
+      indexObj: obj,
+      active: pageNumber
+    }, () => {
+      this.props.getPageIndex(this.state.indexObj)
+    })
   }
 }
 

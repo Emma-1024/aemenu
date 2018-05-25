@@ -11,6 +11,10 @@ import mongo from '../images/img/Mango.jpg'
 import strawberry from '../images/img/strawberry.jpg'
 import cabbage from '../images/img/cabbage.jpg'
 import mushroom from '../images/img/mushroom.jpg'
+import pitaya from '../images/img/pitaya.jpg'
+import banana from '../images/img/banana.jpg'
+import potato from '../images/img/potato.jpg'
+import cucumber from '../images/img/cucumber.jpg'
 
 //TODO TEMP
 import TestComponent from '../test/testComponent'
@@ -36,10 +40,14 @@ class Home extends Component {
       fruit: [
         { id: 1, url: mongo, name: "mongo" },
         { id: 2, url: strawberry, name: "strawberry" },
+        { id: 3, url: pitaya, name: "pitaya" },
+        { id: 4, url: banana, name: "banana" },
       ],
       vegetable: [
         { id: 1, url: cabbage, name: "cabbage" },
         { id: 2, url: mushroom, name: "mushroom" },
+        { id: 3, url: potato, name: "potato" },
+        { id: 4, url: cucumber, name: "cucumber" },
       ]
     }
     this._changePhotos = this._changePhotos.bind(this)
@@ -129,44 +137,6 @@ class Home extends Component {
     active[index] = 'active'
     this.setState({ active: active })
   }
-
-  _test() {
-    fetch(`${process.env.REACT_APP_BACKENDURL}/test`,
-      {
-        method: 'GET',
-        credentials: 'include',
-        // body: JSON.stringify(data),
-        // headers: new Headers({
-        //   'Content-Type': 'application/json'
-        // })
-      })
-      .then(res => res.json())
-      .then(info => {
-        console.log(info)
-      })
-  }
-  _logout() {
-    fetch(`${process.env.REACT_APP_BACKENDURL}/logout`,
-      {
-        method: 'GET',
-        credentials: 'include',
-        // body: JSON.stringify(data),
-        // headers: new Headers({
-        //   'Content-Type': 'application/json'
-        // })
-      })
-      .then(res => res.json())
-      .then(info => {
-        console.log(info)
-      })
-  }
-  // _test() {
-  //   var url = `${process.env.REACT_APP_BACKENDURL}/test`
-  //   axios.get(url)
-  //   .then(info => {
-  //     console.log(info)
-  //   })
-  // }
 }
 
 export default Home

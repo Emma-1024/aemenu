@@ -66,7 +66,7 @@ class Header extends Component {
       this.setState({
         isLoginResult: result.success
       })
-      console.log('isLogin', result)
+      // console.log('isLogin', result)
     })
   }
 }
