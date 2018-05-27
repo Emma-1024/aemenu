@@ -3,7 +3,7 @@
 
 ### ^_^
 - 如果对您对此项目有兴趣，可以点 "Star" 支持一下 谢谢！
-- 后端项目请参照：https://github.com/Alex-T-1024/aemenu-backend
+- 该项目需后端支持，后端项目请参照：https://github.com/Alex-T-1024/aemenu-backend
 
 ## License
 MIT授权的开源项目
@@ -23,7 +23,7 @@ MIT授权的开源项目
 npm run json-server
 npm start
 ```
-后端项目请参照：
+为确保项目正常运行，需要后端服务器支持，后端服务器配置请参照：
 https://github.com/Alex-T-1024/aemenu-backend
 
 # 功能列表
