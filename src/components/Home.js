@@ -56,7 +56,7 @@ class Home extends Component {
     return (
       <div>
         {/* test按钮 */}
-        <TestComponent />
+        {/* <TestComponent /> */}
 
         {/* 轮播图 */}
         <Grid container="true">

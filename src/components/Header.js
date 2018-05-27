@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
-import eventManager, { events } from '../common/eventModule'
 import isAuthenticated from '../common/auth'
 import Login from './Login'
 import Register from './Register'
@@ -14,12 +13,8 @@ class Header extends Component {
       isLoginResult: false
     }
     this._isLoginOrNot()
-    // this._getLoginState = this._getLoginState.bind(this, 'true')
-    // eventManager.subscribe(events.isAuthenticated, this._getLoginState)
   }
-  // componentWillUnmount() {
-  //   eventManager.removeSubscriber(events.isAuthenticated, this._getLoginState)
-  // }
+
   render() {
     // console.log('111',this.state.loginState)
     return (
@@ -56,11 +51,7 @@ class Header extends Component {
       </div>
     )
   }
-  // _getLoginState(boole) {
-  //   this.setState({
-  //     loginState: boole
-  //   })
-  // }
+
   _isLoginOrNot() {
     isAuthenticated().then(result => {
       this.setState({
