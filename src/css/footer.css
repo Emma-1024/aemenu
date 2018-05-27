@@ -32,7 +32,7 @@
 .recruit{
   padding-right: 30px;
 }
-.recruit a:hover{
+.recruit>span:hover{
   color: #fff;
   cursor: pointer;
 }

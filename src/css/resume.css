@@ -1,0 +1,34 @@
+.resume-popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.5);
+  z-index: 999;
+}
+.resume-popup-inner{
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  top: 35%;
+  bottom: 35%;
+  padding: 10px;
+  background: #fff;  
+}
+.partner {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: skyblue;
+  border: 1px solid #ccc;
+}
+.partner a:hover{
+  color: #fff;
+}
+.resume-popup .glyphicon-remove {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  color: #999;
+  cursor: pointer;
+}

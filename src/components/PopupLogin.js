@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Button, Glyphicon } from 'react-bootstrap'
-import createHistory from "history/createBrowserHistory"
+// import createHistory from "history/createBrowserHistory"
 import md5 from '../utility/md5'
 import eventManager,{ events } from '../common/eventModule'
 import getData from '../common/getData'
 import '../css/popuplogin.css'
 
-const history = createHistory()
+// const history = createHistory()
 class PopupLogin extends Component {
   constructor() {
     super()

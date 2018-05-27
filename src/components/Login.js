@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { NavLink } from "react-router-dom"
 import PopupLogin from './PopupLogin'
 import eventManager,{ events } from '../common/eventModule'
 import '../css/login.css'
