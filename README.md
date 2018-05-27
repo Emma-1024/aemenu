@@ -5,10 +5,10 @@
 - 如果对您对此项目有兴趣，可以点 "Star" 支持一下 谢谢！
 - 该项目需后端支持，后端项目请参照：https://github.com/Alex-T-1024/aemenu-backend
 
-## License
+# License
 MIT授权的开源项目
 
-## 技术栈
+# 技术栈
 + HTML + CSS + JavaScript
 + React + React Router + ES6/7 + React Bootstrap
 + Git
