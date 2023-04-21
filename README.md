@@ -48,5 +48,4 @@ https://github.com/Alex-T-1024/aemenu-backend
 
 # 其他
 - 我们目前正在找工作，如果您感兴趣，请联系以下邮箱地址：
-- 前端工程师：yongjie.wu@outlook.com
-- 全栈工程师：yepeng.tian@outlook.com
+- Java开发工程师：yongjie.wu@outlook.com
